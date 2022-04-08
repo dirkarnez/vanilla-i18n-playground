@@ -1,0 +1,9 @@
+{
+    "language": "Language",
+    "form": {
+        "desc": "Fill Your Details!",
+        "name": "Name",
+        "age": "Age",
+        "submit": "Submit"
+    }
+}

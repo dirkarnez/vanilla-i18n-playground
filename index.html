@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/thealphadollar/vanilla-i18n/src/vanilla-i18n.min.js"></script>
+    <script type="text/javascript">
+        const languages = [
+            "english", //file name omitting .json
+            "chinese"
+        ];
+
+        new vanilla_i18n(
+            languages,
+            opts = {
+                path: "assets/vanilla-i18n",
+                debug: true,
+                i18n_attr_name: "vanilla-i18n",
+                toggler_id: "vanilla-i18n-toggler",
+                default_language: languages[0],
+            }
+        ).run();
+    </script>
+</head>
+
+<body>
+    <form action="/" method="GET">
+        <i18n vanilla-i18n="language">Language</i18n>
+        <select id="vanilla-i18n-toggler">
+            <option value="english">English</option>
+            <option value="chinese">Chinese</option>
+        </select>
+        <hr>
+        <h1>
+            <i18n vanilla-i18n="form.desc">Fill Your Details!</i18n>
+        </h1>
+        <i18n vanilla-i18n="form.name">Name</i18n>:
+        <input type="text" name="UserName" size=35 maxlength=35 value="">
+
+        </br></br>
+        <i18n vanilla-i18n="form.age">Age</i18n>:
+        <input type="number" name="Age" size=35 maxlength=35 value="">
+        </br></br>
+        <button type="submit">
+            <i18n vanilla-i18n="form.submit">Submit</i18n>
+        </button>
+    </form>
+</body>
+
+</html>
